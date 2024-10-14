@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package otservice;
+
+message VideoRequest {
+  bytes video_file = 1;
+}
+
+message VideoResponse {
+  bool success = 1;  // Whether the upload was successful
+  string message = 2;  // A response message from the server
+}
+
+service OtService {
+  // Upload the video file using client streaming.
+  rpc UploadVideo(stream VideoRequest) returns (VideoResponse) {}
+}
