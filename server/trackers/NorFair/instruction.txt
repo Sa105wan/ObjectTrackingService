@@ -1,0 +1,6 @@
+it supports python 3.12
+
+steps:
+pip install norfair 
+
+it outputs points and not bounding boxes as tracking data output

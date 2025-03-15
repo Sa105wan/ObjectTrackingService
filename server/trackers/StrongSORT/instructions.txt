@@ -1,0 +1,6 @@
+Strongsort pip doesnt work on python 3.12 directly, some changes are made in the above repo, 
+
+stepes:
+pip install .
+pip install yolov5
+

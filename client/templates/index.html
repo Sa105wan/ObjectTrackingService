@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Video Upload</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='app.js') }}" defer></script>
+</head>
+<body>
+    <h1>Upload Video</h1>
+
+    <!-- Dropdown with checkboxes -->
+     <div class="input">
+        <div class="dropdown">
+            <button class="dropdown-button" onclick="toggleDropdown()">Select Models ▼</button>
+            <div id="dropdownContent" class="dropdown-content">
+                <label>
+                    <input type="checkbox" id="selectAll" onclick="toggleSelectAll()"> Select All
+                </label>
+                <!-- ByteTrack Models -->
+                <h5>ByteTrack</h5>
+                <label><input type="checkbox" value="yolov5n.pt_bytetrack"> Yolov5n_BYteTrack</label>
+                <label><input type="checkbox" value="yolov5s.pt_bytetrack"> Yolov5s_BYteTrack</label>
+                <label><input type="checkbox" value="yolov5m.pt_bytetrack"> Yolov5m_BYteTrack</label>
+                <label><input type="checkbox" value="yolov5l.pt_bytetrack"> Yolov5l_BYteTrack</label>
+                <label><input type="checkbox" value="yolov5x.pt_bytetrack"> Yolov5x_BYteTrack</label>
+
+                <label><input type="checkbox" value="yolov8n.pt_bytetrack"> Yolov8n_BYteTrack</label>
+                <label><input type="checkbox" value="yolov8s.pt_bytetrack"> Yolov8s_BYteTrack</label>
+                <label><input type="checkbox" value="yolov8m.pt_bytetrack"> Yolov8m_BYteTrack</label>
+                <label><input type="checkbox" value="yolov8l.pt_bytetrack"> Yolov8l_BYteTrack</label>
+                <label><input type="checkbox" value="yolov8x.pt_bytetrack"> Yolov8x_BYteTrack</label>
+
+                <label><input type="checkbox" value="yolov9n.pt_bytetrack"> Yolov9n_BYteTrack</label>
+                <label><input type="checkbox" value="yolov9s.pt_bytetrack"> Yolov9s_BYteTrack</label>
+                <label><input type="checkbox" value="yolov9m.pt_bytetrack"> Yolov9m_BYteTrack</label>
+                <label><input type="checkbox" value="yolov9l.pt_bytetrack"> Yolov9l_BYteTrack</label>
+                <label><input type="checkbox" value="yolov9x.pt_bytetrack"> Yolov9x_BYteTrack</label>
+
+                <label><input type="checkbox" value="yolov10n.pt_bytetrack"> Yolov10n_ByteTrack</label>
+                <label><input type="checkbox" value="yolov10s.pt_bytetrack"> Yolov10s_ByteTrack</label>
+                <label><input type="checkbox" value="yolov10m.pt_bytetrack"> Yolov10m_ByteTrack</label>
+                <label><input type="checkbox" value="yolov10l.pt_bytetrack"> Yolov10l_ByteTrack</label>
+                <label><input type="checkbox" value="yolov10x.pt_bytetrack"> Yolov10x_ByteTrack</label>
+
+                <label><input type="checkbox" value="yolo11n.pt_bytetrack"> Yolo11n_ByteTrack</label>
+                <label><input type="checkbox" value="yolo11s.pt_bytetrack"> Yolo11s_ByteTrack</label>
+                <label><input type="checkbox" value="yolo11m.pt_bytetrack"> Yolo11m_ByteTrack</label>
+                <label><input type="checkbox" value="yolo11l.pt_bytetrack"> Yolo11l_ByteTrack</label>
+                <label><input type="checkbox" value="yolo11x.pt_bytetrack"> Yolo11x_ByteTrack</label>
+
+               <!-- BotSort Models -->
+               
+                <h5>BotSort</h5>
+                <label><input type="checkbox" value="yolov5n.pt_botsort"> Yolov5n_BotSort</label>
+                <label><input type="checkbox" value="yolov5s.pt_botsort"> Yolov5s_BotSort</label>
+                <label><input type="checkbox" value="yolov5m.pt_botsort"> Yolov5m_BotSort</label>
+                <label><input type="checkbox" value="yolov5l.pt_botsort"> Yolov5l_BotSort</label>
+                <label><input type="checkbox" value="yolov5x.pt_botsort"> Yolov5x_BotSort</label>
+
+                <label><input type="checkbox" value="yolov8n.pt_botsort"> Yolov8n_BotSort</label>
+                <label><input type="checkbox" value="yolov8s.pt_botsort"> Yolov8s_BotSort</label>
+                <label><input type="checkbox" value="yolov8m.pt_botsort"> Yolov8m_BotSort</label>
+                <label><input type="checkbox" value="yolov8l.pt_botsort"> Yolov8l_BotSort</label>
+                <label><input type="checkbox" value="yolov8x.pt_botsort"> Yolov8x_BotSort</label>
+
+                <label><input type="checkbox" value="yolov9n.pt_botsort"> Yolov9n_BotSort</label>
+                <label><input type="checkbox" value="yolov9s.pt_botsort"> Yolov9s_BotSort</label>
+                <label><input type="checkbox" value="yolov9m.pt_botsort"> Yolov9m_BotSort</label>
+                <label><input type="checkbox" value="yolov9l.pt_botsort"> Yolov9l_BotSort</label>
+                <label><input type="checkbox" value="yolov9x.pt_botsort"> Yolov9x_BotSort</label>
+
+                <label><input type="checkbox" value="yolov10n.pt_botsort"> Yolov10n_BotSort</label>
+                <label><input type="checkbox" value="yolov10s.pt_botsort"> Yolov10s_BotSort</label>
+                <label><input type="checkbox" value="yolov10m.pt_botsort"> Yolov10m_BotSort</label>
+                <label><input type="checkbox" value="yolov10l.pt_botsort"> Yolov10l_BotSort</label>
+                <label><input type="checkbox" value="yolov10x.pt_botsort"> Yolov10x_BotSort</label>
+
+                <label><input type="checkbox" value="yolo11n.pt_botsort"> Yolo11n_BotSort</label>
+                <label><input type="checkbox" value="yolo11s.pt_botsort"> Yolo11s_BotSort</label>
+                <label><input type="checkbox" value="yolo11m.pt_botsort"> Yolo11m_BotSort</label>
+                <label><input type="checkbox" value="yolo11l.pt_botsort"> Yolo11l_BotSort</label>
+                <label><input type="checkbox" value="yolo11x.pt_botsort"> Yolo11x_BotSort</label>
+
+                <!-- Sort Models -->
+                <h5>Sort</h5>
+                <label><input type="checkbox" value="yolov5n.pt_sort"> Yolov5n_Sort</label>
+                <label><input type="checkbox" value="yolov5s.pt_sort"> Yolov5s_Sort</label>
+                <label><input type="checkbox" value="yolov5m.pt_sort"> Yolov5m_Sort</label>
+                <label><input type="checkbox" value="yolov5l.pt_sort"> Yolov5l_Sort</label>
+                <label><input type="checkbox" value="yolov5x.pt_sort"> Yolov5x_Sort</label>
+
+                <label><input type="checkbox" value="yolov8n.pt_sort"> Yolov8n_Sort</label>
+                <label><input type="checkbox" value="yolov8s.pt_sort"> Yolov8s_Sort</label>
+                <label><input type="checkbox" value="yolov8m.pt_sort"> Yolov8m_Sort</label>
+                <label><input type="checkbox" value="yolov8l.pt_sort"> Yolov8l_Sort</label>
+                <label><input type="checkbox" value="yolov8x.pt_sort"> Yolov8x_Sort</label>
+
+                <label><input type="checkbox" value="yolov9n.pt_sort"> Yolov9n_Sort</label>
+                <label><input type="checkbox" value="yolov9s.pt_sort"> Yolov9s_Sort</label>
+                <label><input type="checkbox" value="yolov9m.pt_sort"> Yolov9m_Sort</label>
+                <label><input type="checkbox" value="yolov9l.pt_sort"> Yolov9l_Sort</label>
+                <label><input type="checkbox" value="yolov9x.pt_sort"> Yolov9x_Sort</label>
+
+                <label><input type="checkbox" value="yolov10n.pt_sort"> Yolov10n_Sort</label>
+                <label><input type="checkbox" value="yolov10s.pt_sort"> Yolov10s_Sort</label>
+                <label><input type="checkbox" value="yolov10m.pt_sort"> Yolov10m_Sort</label>
+                <label><input type="checkbox" value="yolov10l.pt_sort"> Yolov10l_Sort</label>
+                <label><input type="checkbox" value="yolov10x.pt_sort"> Yolov10x_Sort</label>
+
+                <label><input type="checkbox" value="yolo11n.pt_sort"> Yolo11n_Sort</label>
+                <label><input type="checkbox" value="yolo11s.pt_sort"> Yolo11s_Sort</label>
+                <label><input type="checkbox" value="yolo11m.pt_sort"> Yolo11m_Sort</label>
+                <label><input type="checkbox" value="yolo11l.pt_sort"> Yolo11l_Sort</label>
+                <label><input type="checkbox" value="yolo11x.pt_sort"> Yolo11x_Sort</label>
+
+                <label><input type="checkbox" value="tvfasterrcnn_sort"> FaterRCNN_Sort</label>
+                <label><input type="checkbox" value="tvfasterrcnnmobilenet_sort"> FasterRCNN_MobileNET_Sort</label>
+                <label><input type="checkbox" value="tvfasterrcnnv2_sort"> FasterRCNN_V2_Sort</label>
+                <label><input type="checkbox" value="tvretinanet_sort"> RetinaNET_Sort</label>
+                <label><input type="checkbox" value="tvssd_sort"> SSD_Sort</label>
+                <label><input type="checkbox" value="tvssdlite_sort"> SSDLite_Sort</label>
+                <label><input type="checkbox" value="tvfcosresnet50_sort"> FCOS_RestNET50_Sort</Sort>
+
+                <label><input type="checkbox" value="tfefficientdetd0_sort"> Efficientdetd0_Sort</label>
+                <label><input type="checkbox" value="tfefficientdetd1_sort"> Efficientdetd1_Sort</label>
+                <label><input type="checkbox" value="tfefficientdetd2_sort"> Efficientdetd2_Sort</label>
+                <label><input type="checkbox" value="tfefficientdetd3_sort"> Efficientdetd3_Sort</label>
+                <label><input type="checkbox" value="tfefficientdetd4_sort"> Efficientdetd4_Sort</label>
+                <label><input type="checkbox" value="tfefficientdetd5_sort"> Efficientdetd5_Sort</label>
+                <label><input type="checkbox" value="tffaster-rcnn-restnet50_sort"> Faster-RCNN-Restnet50_Sort</label>
+                <label><input type="checkbox" value="tffaster-rcnn-restnet-v2_sort"> Faster-RCNN-RestnetV2_Sort</label>
+                <label><input type="checkbox" value="tffaster-rcnn-restnet-101_sort"> Faster-RCNN-Restnet101_Sort</label>
+                <label><input type="checkbox" value="tfretinanet_sort"> Retinanet_Sort</label>
+                <label><input type="checkbox" value="tfssdmobilenetv2_sort"> SSDmobilenetv2_Sort</label>
+                
+                    
+                <!-- DeepSort Models -->
+                <h5>DeepSort</h5>
+                <label><input type="checkbox" value="yolov5n.pt_deepsort"> Yolov5n_DeepSort</label>
+                <label><input type="checkbox" value="yolov5s.pt_deepsort"> Yolov5s_DeepSort</label>
+                <label><input type="checkbox" value="yolov5m.pt_deepsort"> Yolov5m_DeepSort</label>
+                <label><input type="checkbox" value="yolov5l.pt_deepsort"> Yolov5l_DeepSort</label>
+                <label><input type="checkbox" value="yolov5x.pt_deepsort"> Yolov5x_DeepSort</label>
+
+                <label><input type="checkbox" value="yolov8n.pt_deepsort"> Yolov8n_DeepSort</label>
+                <label><input type="checkbox" value="yolov8s.pt_deepsort"> Yolov8s_DeepSort</label>
+                <label><input type="checkbox" value="yolov8m.pt_deepsort"> Yolov8m_DeepSort</label>
+                <label><input type="checkbox" value="yolov8l.pt_deepsort"> Yolov8l_DeepSort</label>
+                <label><input type="checkbox" value="yolov8x.pt_deepsort"> Yolov8x_DeepSort</label>
+
+                <label><input type="checkbox" value="yolov9n.pt_deepsort"> Yolov9n_DeepSort</label>
+                <label><input type="checkbox" value="yolov9s.pt_deepsort"> Yolov9s_DeepSort</label>
+                <label><input type="checkbox" value="yolov9m.pt_deepsort"> Yolov9m_DeepSort</label>
+                <label><input type="checkbox" value="yolov9l.pt_deepsort"> Yolov9l_DeepSort</label>
+                <label><input type="checkbox" value="yolov9x.pt_deepsort"> Yolov9x_DeepSort</label>
+
+                <label><input type="checkbox" value="yolov10n.pt_deepsort"> Yolov10n_DeepSort</label>
+                <label><input type="checkbox" value="yolov10s.pt_deepsort"> Yolov10s_DeepSort</label>
+                <label><input type="checkbox" value="yolov10m.pt_deepsort"> Yolov10m_DeepSort</label>
+                <label><input type="checkbox" value="yolov10l.pt_deepsort"> Yolov10l_DeepSort</label>
+                <label><input type="checkbox" value="yolov10x.pt_deepsort"> Yolov10x_DeepSort</label>
+
+                <label><input type="checkbox" value="yolo11n.pt_deepsort"> Yolo11n_DeepSort</label>
+                <label><input type="checkbox" value="yolo11s.pt_deepsort"> Yolo11s_DeepSort</label>
+                <label><input type="checkbox" value="yolo11m.pt_deepsort"> Yolo11m_DeepSort</label>
+                <label><input type="checkbox" value="yolo11l.pt_deepsort"> Yolo11l_DeepSort</label>
+                <label><input type="checkbox" value="yolo11x.pt_deepsort"> Yolo11x_DeepSort</label>
+
+                <label><input type="checkbox" value="tvfasterrcnn_deepsort"> FaterRCNN_DeepSort</label>
+                <label><input type="checkbox" value="tvfasterrcnnmobilenet_deepsort"> FasterRCNN_MobileNET_DeepSort</label>
+                <label><input type="checkbox" value="tvfasterrcnnv2_deepsort"> FasterRCNN_V2_DeepSort</label>
+                <label><input type="checkbox" value="tvretinanet_deepsort"> RetinaNET_DeepSort</label>
+                <label><input type="checkbox" value="tvssd_deepsort"> SSD_DeepSort</label>
+                <label><input type="checkbox" value="tvssdlite_deepsort"> SSDLite_DeepSort</label>
+                <label><input type="checkbox" value="tvfcosresnet50_deepsort"> FCOS_RestNET50_DeepSort</label>
+
+                <label><input type="checkbox" value="tfefficientdetd0_deepsort"> Efficientdetd0_DeepSort</label>
+                <label><input type="checkbox" value="tfefficientdetd1_deepsort"> Efficientdetd1_DeepSort</label>
+                <label><input type="checkbox" value="tfefficientdetd2_deepsort"> Efficientdetd2_DeepSort</label>
+                <label><input type="checkbox" value="tfefficientdetd3_deepsort"> Efficientdetd3_DeepSort</label>
+                <label><input type="checkbox" value="tfefficientdetd4_deepsort"> Efficientdetd4_DeepSort</label>
+                <label><input type="checkbox" value="tfefficientdetd5_deepsort"> Efficientdetd5_DeepSort</label>
+                <label><input type="checkbox" value="tffaster-rcnn-restnet50_deepsort"> Faster-RCNN-Restnet50_DeepSort</label>
+                <label><input type="checkbox" value="tffaster-rcnn-restnet-v2_deepsort"> Faster-RCNN-RestnetV2_DeepSort</label>
+                <label><input type="checkbox" value="tffaster-rcnn-restnet-101_deepsort"> Faster-RCNN-Restnet101_DeepSort</label>
+                <label><input type="checkbox" value="tfretinanet_deepsort"> Retinanet_DeepSort</label>
+                <label><input type="checkbox" value="tfssdmobilenetv2_deepsort"> SSDmobilenetv2_DeepSort</label>
+
+                <!-- TrackPy Models -->
+                <h5>TrackPy</h5>
+                <label><input type="checkbox" value="yolov5s.pt_trackpy"> Yolov5s_TrackPy</label>
+                <label><input type="checkbox" value="yolov5n.pt_trackpy"> Yolov5n_TrackPy</label>
+                <label><input type="checkbox" value="yolov5m.pt_trackpy"> Yolov5m_TrackPy</label>
+                <label><input type="checkbox" value="yolov5l.pt_trackpy"> Yolov5l_TrackPy</label>
+                <label><input type="checkbox" value="yolov5x.pt_trackpy"> Yolov5x_TrackPy</label>
+
+                <label><input type="checkbox" value="yolov8n.pt_trackpy"> Yolov8n_TrackPy</label>
+                <label><input type="checkbox" value="yolov8s.pt_trackpy"> Yolov8s_TrackPy</label>
+                <label><input type="checkbox" value="yolov8m.pt_trackpy"> Yolov8m_TrackPy</label>
+                <label><input type="checkbox" value="yolov8l.pt_trackpy"> Yolov8l_TrackPy</label>
+                <label><input type="checkbox" value="yolov8x.pt_trackpy"> Yolov8x_TrackPy</label>
+
+                <label><input type="checkbox" value="yolov9n.pt_trackpy"> Yolov9n_TrackPy</label>
+                <label><input type="checkbox" value="yolov9s.pt_trackpy"> Yolov9s_TrackPy</label>
+                <label><input type="checkbox" value="yolov9m.pt_trackpy"> Yolov9m_TrackPy</label>
+                <label><input type="checkbox" value="yolov9l.pt_trackpy"> Yolov9l_TrackPy</label>
+                <label><input type="checkbox" value="yolov9x.pt_trackpy"> Yolov9x_TrackPy</label>
+
+                <label><input type="checkbox" value="yolov10n.pt_trackpy"> Yolov10n_TrackPy</label>
+                <label><input type="checkbox" value="yolov10s.pt_trackpy"> Yolov10s_TrackPy</label>
+                <label><input type="checkbox" value="yolov10m.pt_trackpy"> Yolov10m_TrackPy</label>
+                <label><input type="checkbox" value="yolov10l.pt_trackpy"> Yolov10l_TrackPy</label>
+                <label><input type="checkbox" value="yolov10x.pt_trackpy"> Yolov10x_TrackPy</label>
+
+                <label><input type="checkbox" value="yolo11n.pt_trackpy"> Yolo11n_TrackPy</label>
+                <label><input type="checkbox" value="yolo11s.pt_trackpy"> Yolo11s_TrackPy</label>
+                <label><input type="checkbox" value="yolo11m.pt_trackpy"> Yolo11m_TrackPy</label>
+                <label><input type="checkbox" value="yolo11l.pt_trackpy"> Yolo11l_TrackPy</label>
+                <label><input type="checkbox" value="yolo11x.pt_trackpy"> Yolo11x_TrackPy</label>
+
+                <label><input type="checkbox" value="tvfasterrcnn_trackpy"> FaterRCNN_TrackPy</label>
+                <label><input type="checkbox" value="tvfasterrcnnmobilenet_trackpy"> FasterRCNN_MobileNET_TrackPy</label>
+                <label><input type="checkbox" value="tvfasterrcnnv2_trackpy"> FasterRCNN_V2_TrackPy</label>
+                <label><input type="checkbox" value="tvretinanet_trackpy"> RetinaNET_TrackPy</label>
+                <label><input type="checkbox" value="tvssd_trackpy"> SSD_TrackPy</label>
+                <label><input type="checkbox" value="tvssdlite_trackpy"> SSDLite_TrackPy</label>
+                <label><input type="checkbox" value="tvfcosresnet50_trackpy"> FCOS_RestNET50_TrackPy</label>
+
+                <label><input type="checkbox" value="tfefficientdetd0_trackpy"> Efficientdetd0_TrackPy</label>
+                <label><input type="checkbox" value="tfefficientdetd1_trackpy"> Efficientdetd1_TrackPy</label>
+                <label><input type="checkbox" value="tfefficientdetd2_trackpy"> Efficientdetd2_TrackPy</label>
+                <label><input type="checkbox" value="tfefficientdetd3_trackpy"> Efficientdetd3_TrackPy</label>
+                <label><input type="checkbox" value="tfefficientdetd4_trackpy"> Efficientdetd4_TrackPy</label>
+                <label><input type="checkbox" value="tfefficientdetd5_trackpy"> Efficientdetd5_TrackPy</label>
+                <label><input type="checkbox" value="tffaster-rcnn-restnet50_trackpy"> Faster-RCNN-Restnet50_TrackPy</label>
+                <label><input type="checkbox" value="tffaster-rcnn-restnet-v2_trackpy"> Faster-RCNN-RestnetV2_TrackPy</label>
+                <label><input type="checkbox" value="tffaster-rcnn-restnet-101_trackpy"> Faster-RCNN-Restnet101_TrackPy</label>
+                <label><input type="checkbox" value="tfretinanet_trackpy"> Retinanet_TrackPy</label>
+                <label><input type="checkbox" value="tfssdmobilenetv2_trackpy"> SSDmobilenetv2_TrackPy</label>
+
+
+                <!--NorFair-->
+                <h5>NorFair</h5>
+                <label><input type="checkbox" value="yolov5s.pt_norfair"> Yolov5s_Norfair</label>
+                <label><input type="checkbox" value="yolov5n.pt_norfair"> Yolov5n_Norfair</label>
+                <label><input type="checkbox" value="yolov5m.pt_norfair"> Yolov5m_Norfair</label>
+                <label><input type="checkbox" value="yolov5l.pt_norfair"> Yolov5l_Norfair</label>
+                <label><input type="checkbox" value="yolov5x.pt_norfair"> Yolov5x_Norfair</label>
+
+                <label><input type="checkbox" value="yolov8n.pt_norfair"> Yolov8n_Norfair</label>
+                <label><input type="checkbox" value="yolov8s.pt_norfair"> Yolov8s_Norfair</label>
+                <label><input type="checkbox" value="yolov8m.pt_norfair"> Yolov8m_Norfair</label>
+                <label><input type="checkbox" value="yolov8l.pt_norfair"> Yolov8l_Norfair</label>
+                <label><input type="checkbox" value="yolov8x.pt_norfair"> Yolov8x_Norfair</label>
+
+                <label><input type="checkbox" value="yolov9n.pt_norfair"> Yolov9n_Norfair</label>
+                <label><input type="checkbox" value="yolov9s.pt_norfair"> Yolov9s_Norfair</label>
+                <label><input type="checkbox" value="yolov9m.pt_norfair"> Yolov9m_Norfair</label>
+                <label><input type="checkbox" value="yolov9l.pt_norfair"> Yolov9l_Norfair</label>
+                <label><input type="checkbox" value="yolov9x.pt_norfair"> Yolov9x_Norfair</label>
+
+                <label><input type="checkbox" value="yolov10n.pt_norfair"> Yolov10n_Norfair</label>
+                <label><input type="checkbox" value="yolov10s.pt_norfair"> Yolov10s_Norfair</label>
+                <label><input type="checkbox" value="yolov10m.pt_norfair"> Yolov10m_Norfair</label>
+                <label><input type="checkbox" value="yolov10l.pt_norfair"> Yolov10l_Norfair</label>
+                <label><input type="checkbox" value="yolov10x.pt_norfair"> Yolov10x_Norfair</label>
+
+                <label><input type="checkbox" value="yolo11n.pt_norfair"> Yolo11n_Norfair</label>
+                <label><input type="checkbox" value="yolo11s.pt_norfair"> Yolo11s_Norfair</label>
+                <label><input type="checkbox" value="yolo11m.pt_norfair"> Yolo11m_Norfair</label>
+                <label><input type="checkbox" value="yolo11l.pt_norfair"> Yolo11l_Norfair</label>
+                <label><input type="checkbox" value="yolo11x.pt_norfair"> Yolo11x_Norfair</label>
+
+                <label><input type="checkbox" value="tvfasterrcnn_norfair"> FaterRCNN_Norfair</label>
+                <label><input type="checkbox" value="tvfasterrcnnmobilenet_norfair"> FasterRCNN_MobileNET_Norfair</label>
+                <label><input type="checkbox" value="tvfasterrcnnv2_norfair"> FasterRCNN_V2_Norfair</label>
+                <label><input type="checkbox" value="tvretinanet_norfair"> RetinaNET_Norfair</label>
+                <label><input type="checkbox" value="tvssd_norfair"> SSD_Norfair</label>
+                <label><input type="checkbox" value="tvssdlite_norfair"> SSDLite_Norfair</label>
+                <label><input type="checkbox" value="tvfcosresnet50_norfair"> FCOS_RestNET50_Norfair</label>
+
+                <label><input type="checkbox" value="tfefficientdetd0_norfair"> Efficientdetd0_Norfair</label>
+                <label><input type="checkbox" value="tfefficientdetd1_norfair"> Efficientdetd1_Norfair</label>
+                <label><input type="checkbox" value="tfefficientdetd2_norfair"> Efficientdetd2_Norfair</label>
+                <label><input type="checkbox" value="tfefficientdetd3_norfair"> Efficientdetd3_Norfair</label>
+                <label><input type="checkbox" value="tfefficientdetd4_norfair"> Efficientdetd4_Norfair</label>
+                <label><input type="checkbox" value="tfefficientdetd5_norfair"> Efficientdetd5_Norfair</label>
+                <label><input type="checkbox" value="tffaster-rcnn-restnet50_norfair"> Faster-RCNN-Restnet50_Norfair</label>
+                <label><input type="checkbox" value="tffaster-rcnn-restnet-v2_norfair"> Faster-RCNN-RestnetV2_Norfair</label>
+                <label><input type="checkbox" value="tffaster-rcnn-restnet-101_norfair"> Faster-RCNN-Restnet101_Norfair</label>
+                <label><input type="checkbox" value="tfretinanet_norfair"> Retinanet_Norfair</label>
+                <label><input type="checkbox" value="tfssdmobilenetv2_norfair"> SSDmobilenetv2_Norfair</label>
+
+                <!--StrongSORT-->
+                <h5>StrongSort</h5>
+                <label><input type="checkbox" value="yolov5s.pt_strongsort"> Yolov5s_StrongSort</label>
+                <label><input type="checkbox" value="yolov5n.pt_strongsort"> Yolov5n_StrongSort</label>
+                <label><input type="checkbox" value="yolov5m.pt_strongsort"> Yolov5m_StrongSort</label>
+                <label><input type="checkbox" value="yolov5l.pt_strongsort"> Yolov5l_StrongSort</label>
+                <label><input type="checkbox" value="yolov5x.pt_strongsort"> Yolov5x_StrongSort</label>
+
+                <label><input type="checkbox" value="yolov8n.pt_strongsort"> Yolov8n_StrongSort</label>
+                <label><input type="checkbox" value="yolov8s.pt_strongsort"> Yolov8s_StrongSort</label>
+                <label><input type="checkbox" value="yolov8m.pt_strongsort"> Yolov8m_StrongSort</label>
+                <label><input type="checkbox" value="yolov8l.pt_strongsort"> Yolov8l_StrongSort</label>
+                <label><input type="checkbox" value="yolov8x.pt_strongsort"> Yolov8x_StrongSort</label>
+
+                <label><input type="checkbox" value="yolov9n.pt_strongsort"> Yolov9n_StrongSort</label>
+                <label><input type="checkbox" value="yolov9s.pt_strongsort"> Yolov9s_StrongSort</label>
+                <label><input type="checkbox" value="yolov9m.pt_strongsort"> Yolov9m_StrongSort</label>
+                <label><input type="checkbox" value="yolov9l.pt_strongsort"> Yolov9l_StrongSort</label>
+                <label><input type="checkbox" value="yolov9x.pt_strongsort"> Yolov9x_StrongSort</label>
+
+                <label><input type="checkbox" value="yolov10n.pt_strongsort"> Yolov10n_StrongSort</label>
+                <label><input type="checkbox" value="yolov10s.pt_strongsort"> Yolov10s_StrongSort</label>
+                <label><input type="checkbox" value="yolov10m.pt_strongsort"> Yolov10m_StrongSort</label>
+                <label><input type="checkbox" value="yolov10l.pt_strongsort"> Yolov10l_StrongSort</label>
+                <label><input type="checkbox" value="yolov10x.pt_strongsort"> Yolov10x_StrongSort</label>
+
+                <label><input type="checkbox" value="yolo11n.pt_strongsort"> Yolo11n_StrongSort</label>
+                <label><input type="checkbox" value="yolo11s.pt_strongsort"> Yolo11s_StrongSort</label>
+                <label><input type="checkbox" value="yolo11m.pt_strongsort"> Yolo11m_StrongSort</label>
+                <label><input type="checkbox" value="yolo11l.pt_strongsort"> Yolo11l_StrongSort</label>
+                <label><input type="checkbox" value="yolo11x.pt_strongsort"> Yolo11x_StrongSort</label>
+
+                <label><input type="checkbox" value="tvfasterrcnn_strongsort"> FasterRCNN_StrongSort</label>
+                <label><input type="checkbox" value="tvfasterrcnnmobilenet_strongsort"> FasterRCNN_MobileNET_StrongSort</label>
+                <label><input type="checkbox" value="tvfasterrcnnv2_strongsort"> FasterRCNN_V2_StrongSort</label>
+                <label><input type="checkbox" value="tvretinanet_strongsort"> RetinaNET_StrongSort</label>
+                <label><input type="checkbox" value="tvssd_strongsort"> SSD_StrongSort</label>
+                <label><input type="checkbox" value="tvssdlite_strongsort"> SSDLite_StrongSort</label>
+                <label><input type="checkbox" value="tvfcosresnet50_strongsort"> FCOS_RestNET50_StrongSort</label>
+
+                <label><input type="checkbox" value="tfefficientdetd0_strongsort"> Efficientdetd0_StrongSort</label>
+                <label><input type="checkbox" value="tfefficientdetd1_strongsort"> Efficientdetd1_StrongSort</label>
+                <label><input type="checkbox" value="tfefficientdetd2_strongsort"> Efficientdetd2_StrongSort</label>
+                <label><input type="checkbox" value="tfefficientdetd3_strongsort"> Efficientdetd3_StrongSort</label>
+                <label><input type="checkbox" value="tfefficientdetd4_strongsort"> Efficientdetd4_StrongSort</label>
+                <label><input type="checkbox" value="tfefficientdetd5_strongsort"> Efficientdetd5_StrongSort</label>
+                <label><input type="checkbox" value="tffaster-rcnn-restnet50_strongsort"> Faster-RCNN-Restnet50_StrongSort</label>
+                <label><input type="checkbox" value="tffaster-rcnn-restnet-v2_strongsort"> Faster-RCNN-RestnetV2_StrongSort</label>
+                <label><input type="checkbox" value="tffaster-rcnn-restnet-101_strongsort"> Faster-RCNN-Restnet101_StrongSort</label>
+                <label><input type="checkbox" value="tfretinanet_strongsort"> Retinanet_StrongSort</label>
+                <label><input type="checkbox" value="tfssdmobilenetv2_strongsort"> SSDmobilenetv2_StrongSort</label>
+
+
+                <!-- OCSort Models -->
+                <h5>OCSort</h5>
+                <label><input type="checkbox" value="yolov5s.pt_ocsort"> Yolov5s_OCSort</label>
+                <label><input type="checkbox" value="yolov5n.pt_ocsort"> Yolov5n_OCSort</label>
+                <label><input type="checkbox" value="yolov5m.pt_ocsort"> Yolov5m_OCSort</label>
+                <label><input type="checkbox" value="yolov5l.pt_ocsort"> Yolov5l_OCSort</label>
+                <label><input type="checkbox" value="yolov5x.pt_ocsort"> Yolov5x_OCSort</label>
+
+                <label><input type="checkbox" value="yolov8n.pt_ocsort"> Yolov8n_OCSort</label>
+                <label><input type="checkbox" value="yolov8s.pt_ocsort"> Yolov8s_OCSort</label>
+                <label><input type="checkbox" value="yolov8m.pt_ocsort"> Yolov8m_OCSort</label>
+                <label><input type="checkbox" value="yolov8l.pt_ocsort"> Yolov8l_OCSort</label>
+                <label><input type="checkbox" value="yolov8x.pt_ocsort"> Yolov8x_OCSort</label>
+
+                <label><input type="checkbox" value="yolov9n.pt_ocsort"> Yolov9n_OCSort</label>
+                <label><input type="checkbox" value="yolov9s.pt_ocsort"> Yolov9s_OCSort</label>
+                <label><input type="checkbox" value="yolov9m.pt_ocsort"> Yolov9m_OCSort</label>
+                <label><input type="checkbox" value="yolov9l.pt_ocsort"> Yolov9l_OCSort</label>
+                <label><input type="checkbox" value="yolov9x.pt_ocsort"> Yolov9x_OCSort</label>
+
+                <label><input type="checkbox" value="yolov10n.pt_ocsort"> Yolov10n_OCSort</label>
+                <label><input type="checkbox" value="yolov10s.pt_ocsort"> Yolov10s_OCSort</label>
+                <label><input type="checkbox" value="yolov10m.pt_ocsort"> Yolov10m_OCSort</label>
+                <label><input type="checkbox" value="yolov10l.pt_ocsort"> Yolov10l_OCSort</label>
+                <label><input type="checkbox" value="yolov10x.pt_ocsort"> Yolov10x_OCSort</label>
+
+                <label><input type="checkbox" value="yolo11n.pt_ocsort"> Yolo11n_OCSort</label>
+                <label><input type="checkbox" value="yolo11s.pt_ocsort"> Yolo11s_OCSort</label>
+                <label><input type="checkbox" value="yolo11m.pt_ocsort"> Yolo11m_OCSort</label>
+                <label><input type="checkbox" value="yolo11l.pt_ocsort"> Yolo11l_OCSort</label>
+                <label><input type="checkbox" value="yolo11x.pt_ocsort"> Yolo11x_OCSort</label>
+
+                
+            </div>
+            <input type="file" id="videoInput" accept="video/*">
+        </div>
+        <button id="uploadButton" onclick="uploadVideo()">Upload</button>
+    </div>
+    <!-- Processing indicator (hidden initially) -->
+    <p id="loadingText" style="display: none;">Processing... Please wait.</p>
+
+    <!-- Response container -->
+    <pre id="responseText" style="white-space: pre-wrap;"></pre>
+    <!-- <div id="responseText">
+        <pre id="jsonOutput"></pre>
+    </div> -->
+</body>
+</html>
